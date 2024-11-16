@@ -39,6 +39,10 @@ for index, video in enumerate(video_elements, start=1):
     video_url = video.get_attribute("href")
     print(f"{index}/ {video_title}")
 
+user_confirmation = input("Confirm download press 'y', to cancel press 'n': ")
+
+if (user_confirmation.lower() == "y"):
+    print(video_url)
 
 
 time.sleep(5)
