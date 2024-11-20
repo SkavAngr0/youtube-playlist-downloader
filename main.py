@@ -19,7 +19,7 @@ def main():
         print(f"Total videos: {len(url_list)}\n")
 
         print("Videos in the playlist:")
-        for index, video in enumerate(url_list, start=1):
+        for index, video_url in enumerate(url_list, start=1):
             print(f"{index}/ {url_list}\n")
 
         confirm_download = input("\nConfirm download? Enter 'y' to continue, 'n' to cancel: ").strip().lower()
@@ -31,9 +31,9 @@ def main():
 
         for video in url_list:
             if choice == 'v':
-                download_video(video['url'], save_path)
+                download_video(video_url, save_path)
             elif choice == 'a':
-                download_audio(video['url'], save_path)
+                download_audio(video_url, save_path)
             else:
                 print("Invalid choice. Skipping download.")
     finally:
