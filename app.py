@@ -448,7 +448,7 @@ class YoutubeDownloaderApp(ctk.CTk):
 
     def _on_fetch_complete(self, playlist_name, creator_name, videos):
         self.playlist_name_lbl.configure(text=playlist_name, text_color=C["white"])
-        self.creator_lbl.configure(text=f"by {creator_name}", text_color=C["gray3"])
+        self.creator_lbl.configure(text=f"{creator_name}", text_color=C["gray3"])
         self.count_badge.configure(text=f"  {len(videos)} tracks  ")
 
         for w in self.tracklist_scroll.winfo_children():
